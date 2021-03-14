@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <table class="styled-table mt-3 table-hover mt-3">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Customer</th>
+                <th scope="col">Customer id</th>
+                <th scope="col">Title</th>
+                <th scope="col">Author</th>
+                <th scope="col">Borrow data</th>
+                <th scope="col">Return Date</th>
+                <th scope="col">Edit/Delete</th>
+                <th scope="col">Return</th>
+            </tr>
+        </thead>
+    {% for borrow_info in borrow_infos %}
+        <tbody>
+            <tr class='active-row'>
+            <td>{{ borrow_info.id }}</td>
+            <td>{{ borrow_info.customer }}</td>
+            <td>{{ borrow_info.id }}</td>
+            <td>{{ borrow_info.title }}</td>
+            <td>{{ borrow_info.author }}</td>
+            <td>{{ borrow_info.borrow_date.strftime('%Y-%m-%d') }}</td>
+            <td>{{ borrow_info.return_date.strftime('%Y-%m-%d') }}</td>
+            <td>
+                <a class='link' href="{{ url_for('borrow_edit', book_id=borrow_info.id ) }}">Edit</a>/<a class='link' href="{{ url_for('delete_borrow_info', borrow_info_id=borrow_info.id ) }}">Delete</a>
+            </td>
+            <td><a class='link' href="{{ url_for('return_book', book_id=borrow_info.id ) }}">Return</a></td>
+            </tr>
+        </tbody>
+    {% endfor %}
+    </table>
+{% endblock %}
+
+
+
+
+
+

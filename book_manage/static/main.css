@@ -1,0 +1,141 @@
+
+.link {
+    text-decoration: none;
+}
+
+.top-admin {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.book-description {
+    color: #333;
+}
+
+.book-full-description {
+    white-space: pre-line;
+}
+
+.card-body-height {
+    height: 280px;
+}
+
+
+.search-bar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.card:hover {
+    box-shadow: -1px -1px 5px gainsboro, 1px 1px 5px gainsboro;
+}
+.container-fluid {
+    /*background-color: rgb(207, 208, 212);*/
+    background-color: #ee5d7f;
+    margin-top: -8px;
+    padding: 15px 5px 15px 5px;
+}
+
+.card-body {
+    background-color: rgb(253, 237, 237);
+}
+
+.pencil-sign {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.pencil-sign:hover {
+    transform: scale(1.1);
+}
+
+.delete-sign {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.delete-sign:hover {
+    transform: scale(1.1);
+}
+
+
+.btn-primary {
+    background-color: rgb(38, 107, 84);
+    border: 1px solid rgb(194, 190, 190);
+}
+
+.btn-primary:hover {
+    background-color: rgb(28, 75, 59);
+}
+
+
+.btn-red {
+    background-color: rgb(99, 25, 25);
+}
+.btn-red:hover {
+    background-color: red;
+}
+
+.green {
+    color: rgb(32, 95, 73);
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background-color: rgb(32, 95, 73);
+    background-color: #ee5d7f;
+    color: #ffffff;
+    text-align: left;
+}
+
+
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: thin solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #2e3f3c;
+}
+
+.styled-table tbody tr .active-row {
+    font-weight: bold;
+    color: #011411;
+}
+
+.active-row:hover {
+    background-color: #dddddd;
+}
+
+table {
+    width: 1180px;
+}
+
+th, td {
+  border: 1px solid black;
+}
+
+th {
+    font-size: 12px;
+}
+

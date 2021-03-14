@@ -1,0 +1,70 @@
+{% extends 'layout.html' %}
+
+
+{% block username %}
+<h3 class='text-light top-admin'>Current Admin : {{ current_user.username }} </h3>
+{% endblock %}
+
+{% block content %}
+<div class="mt-3 mb-3">
+    <form class="search-bar" action="/search" method="POST">
+        <div class="search-input">
+            <input class="form-control" type="text" name="searched_book" placeholder="Search for book here">
+        </div>
+        <div class="search-btn">
+            <input class="btn btn-outline-danger" type="submit" value="search">
+        </div>
+    </form>
+</div>
+<!-- Firstly check if there is books -->
+{% if books %}
+<!-- If there is books list loop in to display them -->
+<!-- Loop in books List then show the book -->
+<div class="row">
+    {% for book in books.items %}
+    <div class="col-sm-6">
+        <div class="card mt-3 mb-3 text-center">
+            <!-- display the pencil sign which stand for update -->
+            <a class='image-link' href="{{ url_for('update', book_id = book.id) }}"><img
+                    src="static/photos/pencil-square.svg" class="pencil-sign" alt="delete sign"></a>
+            <!-- display the delete sign which stand for delete -->
+            <a class='image-link' href="{{ url_for('delete_post', book_id = book.id) }}"><img
+                    src="static/photos/x-circle.svg" class="delete-sign" alt="delete sign"></a>
+
+            <div class="card-body card-body-height">
+                <!-- Find the book title then display it in card -->
+                <a class='link' href="{{ url_for('borrow', book_id = book.id)}}">
+                    <h5 class="card-title">{{ book.title.title() }}</h5>
+                </a>
+                <!-- Find the book description then display it in card -->
+                {% if book.description|length > 416 %}
+                    <p class="card-text book-description">{{ book.description[0:416] }} <a class="link" href="{{ url_for('book', book_id = book.id) }}">...</a></p>
+                {% else %}
+                <p class="card-text book-description">{{ book.description }}</p>
+                {% endif %}
+                <!-- Find the book author then display it in card -->
+                <span class='text-muted'>author : {{book.author}}</span><br>
+                <span class='text-muted'>uploader : <a class='link' href="{{ url_for('admin_books', admin=book.auth.username) }}">{{ book.auth.username
+                    }}</a></span>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% for page_num in books.iter_pages() %}
+{% if page_num %}
+{% if books.page == page_num %}
+<a class='btn btn-danger mb-5' href="{{ url_for('home', page=page_num) }}">{{ page_num }}</a>
+{% else %}
+<a class='btn btn-outline-danger mb-5' href="{{ url_for('home', page=page_num) }}">{{ page_num }}</a>
+{% endif %}
+{% else %}
+...
+{% endif %}
+{% endfor %}
+{% else %}
+<!-- Otherwise show this, and advice them to upload it by pass to * upload link *-->
+<h5 class='alert alert-danger muted lead' role='alert'>No books uploaded yet, Go <a class='link'
+        href="{{ url_for('upload') }}">Here</a> To Upload theme</h5>
+{% endif %}
+{% endblock %}
