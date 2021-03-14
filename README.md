@@ -4,7 +4,6 @@
 * Upload a book to the database, and also see it at home page.
 * You'll be able to edit the book if you make a mistake while registering it.
 * Borrow a book to the customer and register the borrowed date.
-   >> To borrow a book you click at the book title.
 * You'll be able to see the borrowed books information.
 * You'll be able to edit the borrowed books information.
 * You'll be able to see the returned books information
@@ -19,7 +18,7 @@ $ python3 run.py<br>
 If there is no errors in terminal,<br>
 Go in your browser and type: http://localhost:5000/
 
-Any suggestions?? let me know :P
+Any suggestions ?! let me know.
 
 Screen Shots
 -------------
