@@ -43,7 +43,7 @@ Screen Shots
 
 • Searched book page
 
-br>
+<br>
 <img src="https://github.com/r-e-d-ant/Library-books-management/blob/main/ScreenShots/search.png"/>
 <br>
 
@@ -62,5 +62,5 @@ br>
 • Returned books information page
 
 <br>
-<img src=https://github.com/r-e-d-ant/library-books-management/blob/main/ScreenShots/return_information.png"/>
-<br>
+<img src="https://github.com/r-e-d-ant/library-books-management/blob/main/ScreenShots/return_information.png"/>
+</br>
