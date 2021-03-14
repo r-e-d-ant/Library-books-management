@@ -24,28 +24,44 @@ Any suggestions?? let me know :P
 Screen Shots
 -------------
 
-<br>
-<img src="https://github.com/red-Ant-02/library-books-management/blob/main/ScreenShots/login.png"/>
-<br>
-
+• Login page
 
 <br>
-<img src="https://github.com/red-Ant-02/library-books-management/blob/main/ScreenShots/register.png"/>
+<img src="https://github.com/r-e-d-ant/library-books-management/blob/main/ScreenShots/login.png"/>
 <br>
 
-<br>
-<img src="https://github.com/red-Ant-02/library-books-management/blob/main/ScreenShots/home.png"/>
-<br>
-
+• Register page
 
 <br>
-<img src="https://github.com/red-Ant-02/library-books-management/blob/main/ScreenShots/borrow.png"/>
+<img src="https://github.com/r-e-d-ant/library-books-management/blob/main/ScreenShots/register.png"/>
 <br>
 
-<br>
-<img src="https://github.com/red-Ant-02/library-books-management/blob/main/ScreenShots/borrow_information.png"/>
-<br>
+• Home  page
 
 <br>
-<img src="https://github.com/red-Ant-02/library-books-management/blob/main/ScreenShots/return_information.png"/>
+<img src="https://github.com/r-e-d-ant/Library-books-management/blob/main/ScreenShots/home.png"/>
+<br>
+
+• Searched book page
+
+br>
+<img src="https://github.com/r-e-d-ant/Library-books-management/blob/main/ScreenShots/search.png"/>
+<br>
+
+• Borrowing book page
+
+<br>
+<img src="https://github.com/r-e-d-ant/Library-books-management/blob/main/ScreenShots/borrow.png"/>
+<br>
+
+• Borrowed books information page
+
+<br>
+<img src="https://github.com/r-e-d-ant/Library-books-management/blob/main/ScreenShots/borrow_information.png"/>
+<br>
+
+• Returned books information page
+
+<br>
+<img src=https://github.com/r-e-d-ant/library-books-management/blob/main/ScreenShots/return_information.png"/>
 <br>
