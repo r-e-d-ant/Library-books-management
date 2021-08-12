@@ -247,8 +247,10 @@ main {
     margin-bottom: 5rem;
 }
 
+/* --- Home --- */
 .search_bar-container {
-    margin: 2rem 0;
+    margin: 3rem 0;
+    margin-bottom: 5rem;
 }
 .search-bar {
     display: flex;
@@ -364,6 +366,14 @@ main {
 .book-register {
     color: #2081f8c4;
     font-weight: 300;
+}
+
+/* --- Searched book page --- */
+.result-title {
+    color: var(--dark-clr);
+    font-size: 1.1rem;
+    padding-bottom: .8rem;
+    border-bottom: thin solid #02183125;
 }
 
 

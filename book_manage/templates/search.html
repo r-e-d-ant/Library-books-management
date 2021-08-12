@@ -1,53 +1,53 @@
 {% extends 'layout.html' %}
 
-
-{% block username %}
-<h3 class='text-light top-admin'>Current Admin : {{ current_user.username }} </h3>
-{% endblock %}
-
 {% block content %}
-<div class="mt-5">
+<div class="search_bar-container">
     <form class="search-bar" action="/search" method="POST">
-        <div class="search-input">
-            <input class="form-control" type="text" name="searched_book" placeholder="Search for book here">
-        </div>
-        <div class="search-btn">
-            <input class="btn btn-outline-danger" type="submit" value="search">
-        </div>
+        <input id="input-search" class="search-input" type="text" name="searched_book" placeholder="Search book by title...">
+        <input class="btn btn-search" type="submit" value="search">
     </form>
 </div>
-<div class="mt-2 mb-2 border-bottom">
+<div class="result-title">
     <span>Results for : {{ searched_book }}</span>
 </div>
 <!-- Loop in books List then show the book -->
-<div class="row">
+<div class="books-container">
     {% for book in books %}
-    <div class="col-sm-6">
-        <div class="card mt-3 mb-3 text-center">
-            <!-- display the pencil sign which stand for update -->
-            <a class='image-link' href="{{ url_for('update', book_id = book.id) }}"><img
-                    src="static/photos/pencil-square.svg" class="pencil-sign" alt="delete sign"></a>
-            <!-- display the delete sign which stand for delete -->
-            <a class='image-link' href="{{ url_for('delete_post', book_id = book.id) }}"><img
-                    src="static/photos/x-circle.svg" class="delete-sign" alt="delete sign"></a>
+    <div class="book">
+        <!-- display the pencil sign which stand for update -->
+        <a class='image-link' href="{{ url_for('update', book_id = book.id) }}">
+            <i class='bx bxs-edit pencil-sign' title="update the book"></i>
+        </a>
+        <!-- display the delete sign which stand for delete -->
+        <a class='image-link' href="{{ url_for('delete_post', book_id = book.id) }}">
+            <i class='bx bx-x-circle delete-sign' title="delete the book"></i>
+        </a>
 
-            <div class="card-body card-body-height">
-                <!-- Find the book title then display it in card -->
-                <a class='link' href="{{ url_for('borrow', book_id = book.id)}}">
-                    <h5 class="card-title">{{ book.title.title() }}</h5>
-                </a>
-                <!-- Find the book description then display it in card -->
-                {% if book.description|length > 416 %}
-                    <p class="card-text book-description">{{ book.description[0:416] }} <a class="link" href="{{ url_for('book', book_id = book.id) }}">...</a></p>
-                {% else %}
-                <p class="card-text book-description">{{ book.description }}</p>
-                {% endif %}
-                <!-- Find the book author then display it in card -->
-                <span class='text-muted'>author : {{book.author}}</span><br>
-                <span class='text-muted'>uploader : <a class='link' href="{{ url_for('admin_books', admin=book.auth.username) }}">{{ book.auth.username
-                    }}</a></span>
+        <div class="book-body">
+            <!-- Find the book title then display it in card -->
+            <a class='link' href="{{ url_for('borrow', book_id = book.id)}}">
+                <h5 class="book-title">{{ book.title.title() }}</h5>
+            </a>
+            <!-- Find the book author then display it in card -->
+            <div class="book_subinfo-container">
+                <span class='book-sub-info'>By <b>{{book.author}}</b></span><br>
+                <span class='book-sub-info'>
+                    Book register
+                    <a class='link book-register' href="{{ url_for('admin_books', admin=book.auth.username) }}" title="See all books uploaded by {{ book.auth.username }}">
+                        {{ book.auth.username}}
+                    </a>
+                </span>
             </div>
+
+            <!-- Find the book description then display it in card -->
+            {% if book.description|length > 416 %}
+                <p class="book-description">{{ book.description[0:416] }} <a class="link" href="{{ url_for('book', book_id = book.id) }}">...</a></p>
+            {% else %}
+            <p class="book-description">{{ book.description }}</p>
+            {% endif %}
         </div>
+
+        <a class="btn-borrow" href="{{ url_for('borrow', book_id = book.id)}}">Borrow</a>
     </div>
     {% endfor %}
 </div>
