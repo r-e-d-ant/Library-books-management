@@ -43,8 +43,8 @@
                 <p class="card-text book-description">{{ book.description }}</p>
                 {% endif %}
                 <!-- Find the book author then display it in card -->
-                <span class='text-muted'>author : {{book.author}}</span><br>
-                <span class='text-muted'>uploader : <a class='link' href="{{ url_for('admin_books', admin=book.auth.username) }}">{{ book.auth.username
+                <span class='text-muted book-sub-info'>author : {{book.author}}</span><br>
+                <span class='text-muted book-sub-info'>uploader : <a class='link' href="{{ url_for('admin_books', admin=book.auth.username) }}" title="See all books uploaded by {{ book.auth.username }}">{{ book.auth.username
                     }}</a></span>
             </div>
         </div>
