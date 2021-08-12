@@ -53,17 +53,17 @@
 
             <div class="dates">
                 <!------------------------------------------>
-                <div class='form-group borrow-date'>
+                <div class='form-group boro_date'>
                     {{ form.borrow_date.label(class='form-control-label')}}
                     {% if form.borrow_date.errors %}
-                        {{ form.borrow_date(class='form-control is-invalid')}}
+                        {{ form.borrow_date(class='form-control date borrow-date is-invalid')}}
                         <div class='invalid-feedback'>
                             {% for error in form.borrow_date.errors %}
                                 <span> {{ error }} </span>
                             {% endfor %}
                         </div>
                     {% else %}
-                        {{ form.borrow_date(class='form-control')}}
+                        {{ form.borrow_date(class='form-control date borrow-date')}}
                     {% endif %}
                 </div>
 
@@ -71,14 +71,14 @@
                 <div class='form-group'>
                     {{ form.return_date.label(class='form-control-label')}}
                     {% if form.return_date.errors %}
-                        {{ form.return_date(class='form-control is-invalid')}}
+                        {{ form.return_date(class='form-control date is-invalid')}}
                         <div class='invalid-feedback'>
                             {% for error in form.return_date.errors %}
                                 <span> {{ error }} </span>
                             {% endfor %}
                         </div>
                     {% else %}
-                        {{ form.return_date(class='form-control')}}
+                        {{ form.return_date(class='form-control date')}}
                     {% endif %}
                 </div>
             </div>
