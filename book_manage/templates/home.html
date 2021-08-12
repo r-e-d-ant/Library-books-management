@@ -44,7 +44,7 @@
             <p class="book-description">{{ book.description }}</p>
             {% endif %}
         </div>
-        <a class="btn btn-borrow" href="{{ url_for('borrow', book_id = book.id)}}">Borrow</a>
+        <a class="btn-borrow" href="{{ url_for('borrow', book_id = book.id)}}">Borrow</a>
     </div>
     {% endfor %}
 </div>
