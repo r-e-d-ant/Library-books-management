@@ -25,7 +25,7 @@
             <ul class="nav-items">
                 {% if current_user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="active nav-link" aria-current="page" href="{{ url_for('home') }}">All books</a>
+                        <a class="active nav-link" aria-current="page" href="{{ url_for('home') }}">All Books</a>
                     </li>
                     <!---->
                     <li class="nav-item">
@@ -37,9 +37,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('return_info') }}">Returned Books</a>
                     </li> 
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
-                    </li>
                 {% else %}
                     <!---->
                     <li class="nav-item">
@@ -51,14 +48,28 @@
                     </li>
                 {% endif %}
             </ul>
-            <div class="user-icon"></div>
+            <div class="user-icon-container">
+                <div class="user-icon">
+                    <i class="bx bx-user"></i>
+                </div>
+                <i class='bx bxs-down-arrow'></i>
+                <div class="librarian_name">
+                    <span>{{current_user.username}}</span>
+                    {% if current_user.is_authenticated %}
+                    <li class="nav-item logout">
+                        <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+                    </li>
+                    {% endif %}
+                </div>
+            </div>
         </nav>
         <div class="hamburger-close-container">
             <i class="bx bx-menu nav-icon"></i>
             <i class="bx bx-x nav-icon"></i>
         </div>
     </header>
-    <main role='main' class='container'>
+    <!-- Main -->
+    <main class='container'>
         <div class='row-3'>
             <div class=''>
                 {% with messages = get_flashed_messages(with_categories=True) %}

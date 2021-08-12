@@ -19,14 +19,17 @@
     padding: 0;
     box-sizing: border-box;
 }
-ul {
+ul, li {
     list-style: none;
 }
 a {
     text-decoration: none;
 }
+.container {
+    padding: 0 2rem;
+}
 body {
-    font-family: 'Source Code Pro', monospace;;
+    font-family: 'Source Code Pro', monospace;
     background-color: var(--white-clr);
 }
 
@@ -37,6 +40,7 @@ body {
     align-items: center;
     background-color: var(--primary-clr);
     padding: 1rem 2rem;
+    position: relative;
 }
 .nav-icon {
     color: var(--white-clr-alt);
@@ -44,6 +48,11 @@ body {
 }
 .hamburger-close-container {
     display: none;
+}
+.nav-bar {
+    background-color: var(--primary-clr);
+    display: flex;
+    align-items: center;
 }
 .nav-items {
     display: flex;
@@ -94,8 +103,61 @@ body {
     transform: scaleX(.1);
     transition: 300ms transform;
 }
+.user-icon-container {
+    cursor: pointer;
+    margin-left: 3rem;
+    display: flex;
+    align-items: flex-end;
+}
+.user-icon {
+    background-color: var(--white-clr-alt);
+    border-radius: 50%;
+    pointer-events: none;
+}
+.bx-user {
+    font-size: 1.5rem;
+    padding: .5rem;
+    color: var(--primary-clr);
+}
+.bxs-down-arrow {
+    font-size: 1rem;
+    color: var(--white-clr-alt);
+    opacity: .8;
+    pointer-events: none;
+}
+.librarian_name {
+    background-color: var(--primary-clr);
+    color: var(--white-clr-alt);
+    position: absolute;
+    bottom: -6rem;
+    right: .5rem;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 300ms transform;
+}
+.show-librarian-name {
+    transform: scaleY(1);
+}
+.librarian_name span {
+    color: var(--white-clr-alt);
+    cursor: auto;
+}
+.logout {
+    margin: 0;
+    margin-top: 1rem;
+}
 
-@media screen and (max-width: 852px) {
+@media screen and (max-width: 861px) {
+    /* Base */
+    .container {
+        padding: 0 .5rem;
+    }
     /* --- HEADER --- */
     .header {
         padding: 1rem .5rem;
@@ -116,7 +178,7 @@ body {
         display: none;
     }
     .nav-bar {
-        background-color: var(--primary-clr);
+        display: block;
         position: absolute;
         padding: 2rem 2.5rem;
         top: 4.7rem;
@@ -142,99 +204,134 @@ body {
     .nav-item:last-child {
         margin-bottom: 0;
     }
+    .user-icon-container {
+        margin-top: 1rem;
+    }
 }
 
+/* --- Main --- */
 main {
-    display: none;
+    margin-bottom: 5rem;
 }
 
-.book-description {
-    color: rgba(51, 51, 51, 0.678);
-    font-size: 1rem;
-    letter-spacing: .04rem;
-    line-height: 1.5rem;
-    font-weight: 300;
+.search_bar-container {
+    margin: 2rem 0;
+}
+.search-bar {
+    display: flex;
+    flex-direction: column;
+}
+.search-input {
+    height: 2.5rem;
+    font-size: 1.2rem;
+    font-family: 'Source Code Pro', monospace;
+    color: var(--dark-clr);
+    outline: none;
+    border: thin solid #01141159;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 0 .5rem;
+}
+.btn-search {
+    cursor: pointer;
+    border: none;
+    width: 150px;
+    height: 45px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    background-color: var(--primary-clr);
+    color: var(--white-clr-alt);
+    font-family: 'Source Code Pro', monospace;
+}
+
+.books-container {
+    margin: 2rem 0;
+}
+.book {
+    position: relative;
+    margin: 2rem 0;
+    background-color: var(--white-clr-alt);
+    border: thin solid #02183154;
+    border-radius: 5px;
+    padding: 2.8rem 1rem 2rem 1rem;
+}
+.bxs-edit, .bx-x-circle {
+    font-size: 1.5rem;
+    color: #094e9db6;
+}
+.pencil-sign {
+    position: absolute;
+    top: .7rem;
+    left: 1rem;
+    transition: 300ms transfomr;
+}
+.delete-sign {
+    position: absolute;
+    top: .7rem;
+    right: 1rem;
+    transition: 300ms transfomr;
+}
+
+.pencil-sign:hover, .delete-sign:hover {
+    transform: scale(1.1);
+}
+.book-title {
+    color: var(--primary-clr);
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+}
+.book_subinfo-container {
+    margin-top: 1rem;
 }
 .book-sub-info {
     font-size: .9rem;
-    color: rgba(51, 51, 51, 0.678);
+    color: #0218319a;
     font-weight: 300;
+}
+.book-sub-info:last-child {
+    margin-top: .5rem;
+}
+.book-sub-info b, .book-register {
+    color: #2081f8c4;
+    font-weight: 300;
+}
+
+
+.book-description {
+    color: var(--dark-clr);
+    font-size: .9rem;
+    letter-spacing: .04rem;
+    line-height: 1.5rem;
+    margin: 2rem 0;
+}
+.btn-borrow {
+    background-color: var(--primary-clr);
+    color: var(--white-clr-alt);
+    padding: .6rem 3.3rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+}
+.paginations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.btn-pagination {
+    background-color: var(--primary-clr);
+    color: var(--white-clr-alt);
+    font-size: 2rem;
+    padding: 0 2rem;
+    border-radius: 5px;
+}
+.btn-pagination:first-child {
+    margin-left: 0;
+}
+.btn-pagination:last-child {
+    margin-right: 0;
 }
 
 .book-full-description {
     white-space: pre-line;
-}
-
-.card-body-height {
-    height: 280px;
-}
-
-.search-bar {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-}
-.card {
-    position: relative;
-}
-
-.card:hover {
-    box-shadow: -1px -1px 5px gainsboro, 1px 1px 5px gainsboro;
-}
-.container-fluid {
-    /*background-color: rgb(207, 208, 212);*/
-    background-color: #ee5d7f;
-    margin-top: -8px;
-    padding: 15px 5px 15px 5px;
-}
-
-.card-body {
-    background-color: rgb(253, 237, 237);
-}
-.card-title {
-    color: #0077b6;
-    transition: 300ms color;
-}
-.card-title:hover {
-    color: #023e8a;
-}
-
-.pencil-sign {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-}
-
-.pencil-sign:hover {
-    transform: scale(1.1);
-}
-
-.delete-sign {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-}
-
-.delete-sign:hover {
-    transform: scale(1.1);
-}
-
-
-.btn-primary {
-    background-color: rgb(38, 107, 84);
-    border: 1px solid rgb(194, 190, 190);
-}
-
-.btn-primary:hover {
-    background-color: rgb(28, 75, 59);
-}
-
-
-.btn-red {
-    background-color: rgb(99, 25, 25);
-}
-.btn-red:hover {
-    background-color: red;
 }
 
 .green {
