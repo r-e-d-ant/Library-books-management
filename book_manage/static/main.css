@@ -244,13 +244,36 @@ main {
     font-family: 'Source Code Pro', monospace;
 }
 
+@media screen and (min-width: 768px){
+    .header {
+        padding: 1rem;
+    }
+    .container {
+        padding: 0 1rem;
+    }
+    .search-bar {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .search-input {
+        height: 2.8rem;
+        width: 50%;
+        margin: 0;
+    }
+    .btn-search {
+        margin-left: 1.8rem;
+        font-size: 1.4rem;
+    }
+}
+
 .books-container {
     margin: 2rem 0;
 }
 .book {
+    background-color: var(--white-clr-alt);
     position: relative;
     margin: 2rem 0;
-    background-color: var(--white-clr-alt);
+    width: 40%;
     border: thin solid #02183154;
     border-radius: 5px;
     padding: 2.8rem 1rem 2rem 1rem;
@@ -298,7 +321,7 @@ main {
 
 
 .book-description {
-    color: var(--dark-clr);
+    color: #021831c9;
     font-size: .9rem;
     letter-spacing: .04rem;
     line-height: 1.5rem;
@@ -313,6 +336,7 @@ main {
 }
 .paginations {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
 }
@@ -323,11 +347,35 @@ main {
     padding: 0 2rem;
     border-radius: 5px;
 }
+.btn-pagination-out {
+    border: thin solid var(--primary-clr);
+    color: var(--primary-clr);
+    font-size: 2rem;
+    padding: 0 2rem;
+    border-radius: 5px;
+}
 .btn-pagination:first-child {
     margin-left: 0;
 }
 .btn-pagination:last-child {
     margin-right: 0;
+}
+@media screen and (min-width: 1024px){
+    .books-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    .book {
+        border: thin solid #02183133;
+    }
+    .btn-borrow {
+        font-size: 1rem;
+    }
+    .btn-pagination, .btn-pagination-out {
+        font-size: 1.4rem;
+    }
 }
 
 .book-full-description {
@@ -392,3 +440,60 @@ th {
     font-size: 12px;
 }
 
+/* Upload Book */
+.form-title {
+    color: var(--primary-clr);
+    font-size: 1.8rem;
+    margin: 2rem 0;
+    margin-bottom: 4rem;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+.form-control-label {
+    font-size: 1.1rem;
+    margin-bottom: .5rem;
+}
+.form-control {
+    height: 2.8rem;
+    font-size: 1.2rem;
+    font-family: 'Source Code Pro', monospace;
+    color: var(--dark-clr);
+    outline: none;
+    border: thin solid #01141159;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 0 .5rem;
+}
+.form-control-desc {
+    height: 5rem;
+    padding-top: .2rem;
+}
+.btn-submit {
+    cursor: pointer;
+    border: none;
+    width: 250px;
+    height: 45px;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    background-color: var(--primary-clr);
+    color: var(--white-clr-alt);
+    font-family: 'Source Code Pro', monospace;
+}
+
+@media screen and (min-width: 768px){
+    .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+    }
+    .form-control {
+        width: 150%;
+    }
+    .btn-submit {
+        font-size: 1.2rem;
+    }
+}
