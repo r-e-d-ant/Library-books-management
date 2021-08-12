@@ -7,6 +7,7 @@
     --dark-clr: #021831;
     --white-clr: #f5faff;
     --white-clr-alt: #f0f8ff;
+    --white-input-clr: #f3f8fd;
     --gray-clr: #617283;
     --link-clr: #2083F8;
     --footer-bg-clr: #063060;
@@ -225,9 +226,10 @@ main {
     height: 2.5rem;
     font-size: 1.2rem;
     font-family: 'Source Code Pro', monospace;
+    background-color: var(--white-input-clr);
     color: var(--dark-clr);
     outline: none;
-    border: thin solid #01141159;
+    border: thin solid #0114112c;
     border-radius: 5px;
     margin-bottom: 1rem;
     padding: 0 .5rem;
@@ -369,6 +371,7 @@ main {
     }
     .book {
         border: thin solid #02183133;
+        margin: 0;
     }
     .btn-borrow {
         font-size: 1rem;
@@ -460,9 +463,10 @@ th {
     height: 2.8rem;
     font-size: 1.2rem;
     font-family: 'Source Code Pro', monospace;
+    background-color: var(--white-input-clr);
     color: var(--dark-clr);
     outline: none;
-    border: thin solid #01141159;
+    border: thin solid #0114112c;
     border-radius: 5px;
     margin-bottom: 1rem;
     padding: 0 .5rem;
