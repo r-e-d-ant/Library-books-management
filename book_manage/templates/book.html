@@ -1,21 +1,16 @@
 {% extends 'layout.html' %}
 {% block content %}
-<div class="row">
-    <div class="container mt-3 mb-3">
-        <div class="card-body">
-            <!-- Find the book title then display it in card -->
-            <a class='link' href="{{ url_for('borrow', book_id = one_book.id)}}">
-                <h5 class="card-title">{{ one_book.title.title() }}</h5>
-            </a>
-            <!-- Find the book description then display it in card -->
-            <p class="card-text book-description book-full-description">{{ one_book.description }}</p>
-            <!-- Find the book author then display it in card -->
-        </div>
-        <div>
-        </div>
-        <div class="mt-3">
-            <a class='btn btn-outline-danger' href="{{ url_for('borrow', book_id = one_book.id)}}">Borrow</a>
-        </div>
-    </div>
+<div class="book-desc-container">
+    <!-- Find the book title then display it in card -->
+    <a class='link' href="{{ url_for('borrow', book_id = one_book.id)}}">
+        <h5 class="book-title">{{ one_book.title.title() }}</h5>
+    </a>
+    <!-- Find the book description then display it in card -->
+    <p class="book-full-description">{{ one_book.description }}</p>
+    <!-- Find the book author then display it in card -->
+</div>
+
+<div class="mt-3">
+    <a class='btn btn-borrow' href="{{ url_for('borrow', book_id = one_book.id)}}">Borrow</a>
 </div>
 {% endblock %}

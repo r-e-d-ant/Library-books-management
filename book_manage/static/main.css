@@ -28,6 +28,7 @@ ul, li {
 }
 a {
     text-decoration: none;
+    color: var(--link-clr);
 }
 .container {
     padding: 0 2rem;
@@ -52,6 +53,13 @@ a {
 }
 .alert-warning {
     background-color: hsl(50, 98%, 49%, 0.322);
+}
+.btn {
+    transition: 300ms background-color;
+}
+.btn:hover,
+.btn:focus {
+    background-color: #094e9de0;
 }
 body {
     font-family: 'Source Code Pro', monospace;
@@ -239,8 +247,10 @@ main {
     margin-bottom: 5rem;
 }
 
+/* --- Home --- */
 .search_bar-container {
-    margin: 2rem 0;
+    margin: 3rem 0;
+    margin-bottom: 5rem;
 }
 .search-bar {
     display: flex;
@@ -253,10 +263,13 @@ main {
     background-color: var(--white-input-clr);
     color: var(--dark-clr);
     outline: none;
-    border: thin solid #0114112c;
+    border: thin solid #02183113;
     border-radius: 5px;
     margin-bottom: 1rem;
     padding: 0 .5rem;
+}
+.search-input:focus {
+    box-shadow: 0 0 6px 1px #094e9d1c;
 }
 .btn-search {
     cursor: pointer;
@@ -265,9 +278,16 @@ main {
     height: 45px;
     font-size: 1.4rem;
     border-radius: 5px;
+    border: thin solid #02183113;
+    background-color: var(--white-clr-alt);
+    color: var(--primary-clr);
+    font-family: 'Source Code Pro', monospace;
+    transition: 300ms background-color, 300ms color;
+}
+.btn-search:hover,
+.btn-search:focus {
     background-color: var(--primary-clr);
     color: var(--white-clr-alt);
-    font-family: 'Source Code Pro', monospace;
 }
 
 @media screen and (min-width: 768px){
@@ -279,6 +299,7 @@ main {
     }
     .search-bar {
         flex-direction: row;
+        align-items: center;
         justify-content: center;
     }
     .search-input {
@@ -299,7 +320,7 @@ main {
     background-color: var(--white-clr-alt);
     position: relative;
     margin: 2rem 0;
-    border: thin solid #02183154;
+    border: thin solid #02183127;
     border-radius: 5px;
     padding: 2.8rem 1rem 2rem 1rem;
 }
@@ -339,25 +360,44 @@ main {
 .book-sub-info:last-child {
     margin-top: .5rem;
 }
-.book-sub-info b, .book-register {
+.book-sub-info b {
+    color: #02183160;
+}
+.book-register {
     color: #2081f8c4;
     font-weight: 300;
 }
 
+/* --- Searched book page --- */
+.result-title {
+    color: var(--dark-clr);
+    font-size: 1.1rem;
+    padding-bottom: .8rem;
+    border-bottom: thin solid #02183125;
+}
+
 
 .book-description {
-    color: #021831c9;
+    color: #021831a9;
     font-size: .9rem;
-    letter-spacing: .04rem;
+    letter-spacing: .01rem;
     line-height: 1.5rem;
     margin: 2rem 0;
 }
 .btn-borrow {
-    background-color: var(--primary-clr);
-    color: var(--white-clr-alt);
+    background-color: var(--white-clr-alt);
+    color: var(--primary-clr);
+    border: thin solid #02183149;
     padding: .6rem 3.3rem;
     font-size: 1.1rem;
     border-radius: 5px;
+    transition: 300ms background-color, 300ms color, 300ms border;
+}
+.btn-borrow:hover,
+.btn-borrow:focus {
+    background-color: var(--primary-clr);
+    color: var(--white-clr-alt);
+    border: thin solid var(--primary-clr);
 }
 .paginations {
     display: flex;
@@ -393,7 +433,7 @@ main {
         gap: 2rem;
     }
     .book {
-        border: thin solid #02183133;
+        border: thin solid #02183113;
         width: 40%;
         margin: 0;
     }
@@ -440,6 +480,9 @@ main {
     margin-bottom: 1rem;
     padding: 0 .5rem;
 }
+.form-control:focus {
+    box-shadow: 0 0 6px 1px #094e9d1c;
+}
 .form-control-desc {
     height: 5rem;
     padding-top: .2rem;
@@ -481,6 +524,17 @@ main {
 }
 .register_login_acc a {
     color: var(--link-clr);
+}
+
+/* Single book description  */
+.book-desc-container {
+    margin-top: 3rem;
+}
+.book-full-description {
+    color: #021831dc;
+    margin: 2rem 0;
+    margin-bottom: 4rem;
+    max-width: 40rem;
 }
 
 /* Borrow Book page */

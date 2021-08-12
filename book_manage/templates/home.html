@@ -2,7 +2,7 @@
 {% block content %}
 <div class="search_bar-container">
     <form class="search-bar" action="/search" method="POST">
-        <input class="search-input" type="text" name="searched_book">
+        <input id="input-search" class="search-input" type="text" name="searched_book" placeholder="Search book by title...">
         <input class="btn btn-search" type="submit" value="search">
     </form>
 </div>
@@ -44,7 +44,7 @@
             <p class="book-description">{{ book.description }}</p>
             {% endif %}
         </div>
-        <a class="btn btn-borrow" href="{{ url_for('borrow', book_id = book.id)}}">Borrow</a>
+        <a class="btn-borrow" href="{{ url_for('borrow', book_id = book.id)}}">Borrow</a>
     </div>
     {% endfor %}
 </div>
