@@ -209,6 +209,11 @@ body {
     }
 }
 
+/* --- Main --- */
+main {
+    margin-bottom: 5rem;
+}
+
 .search_bar-container {
     margin: 2rem 0;
 }
@@ -250,15 +255,21 @@ body {
     border-radius: 5px;
     padding: 2.8rem 1rem 2rem 1rem;
 }
+.bxs-edit, .bx-x-circle {
+    font-size: 1.5rem;
+    color: #094e9db6;
+}
 .pencil-sign {
     position: absolute;
     top: .7rem;
     left: 1rem;
+    transition: 300ms transfomr;
 }
 .delete-sign {
     position: absolute;
     top: .7rem;
     right: 1rem;
+    transition: 300ms transfomr;
 }
 
 .pencil-sign:hover, .delete-sign:hover {
@@ -267,27 +278,56 @@ body {
 .book-title {
     color: var(--primary-clr);
     font-size: 1.4rem;
+    margin-top: 1.5rem;
+}
+.book_subinfo-container {
+    margin-top: 1rem;
 }
 .book-sub-info {
     font-size: .9rem;
     color: #0218319a;
     font-weight: 300;
 }
-.book-sub-info b {
-    color: #2081f8c4;
+.book-sub-info:last-child {
+    margin-top: .5rem;
 }
+.book-sub-info b, .book-register {
+    color: #2081f8c4;
+    font-weight: 300;
+}
+
 
 .book-description {
     color: var(--dark-clr);
     font-size: .9rem;
     letter-spacing: .04rem;
     line-height: 1.5rem;
+    margin: 2rem 0;
 }
 .btn-borrow {
     background-color: var(--primary-clr);
     color: var(--white-clr-alt);
     padding: .6rem 3.3rem;
     font-size: 1.1rem;
+    border-radius: 5px;
+}
+.paginations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.btn-pagination {
+    background-color: var(--primary-clr);
+    color: var(--white-clr-alt);
+    font-size: 2rem;
+    padding: 0 2rem;
+    border-radius: 5px;
+}
+.btn-pagination:first-child {
+    margin-left: 0;
+}
+.btn-pagination:last-child {
+    margin-right: 0;
 }
 
 .book-full-description {
