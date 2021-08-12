@@ -1,15 +1,164 @@
 
-.link {
+/* font family link it's Source code pro font family */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --primary-clr: #094e9d;
+    --dark-clr: #021831;
+    --white-clr: #f5faff;
+    --white-clr-alt: #f0f8ff;
+    --gray-clr: #617283;
+    --link-clr: #2083F8;
+    --footer-bg-clr: #063060;
+}
+/* --- BASE --- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+a {
     text-decoration: none;
 }
+body {
+    font-family: 'Source Code Pro', monospace;;
+    background-color: var(--white-clr);
+}
 
-.top-admin {
-    font-size: 16px;
-    margin-right: 10px;
+/* --- HEADER --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-clr);
+    padding: 1rem 2rem;
+}
+.nav-icon {
+    color: var(--white-clr-alt);
+    font-size: 2.5rem;
+}
+.hamburger-close-container {
+    display: none;
+}
+.nav-items {
+    display: flex;
+    align-items: center;
+}
+.nav-item {
+    margin: 0 1.2rem;
+}
+.nav-item:last-child {
+    margin-right: 0;
+}
+
+.nav-link {
+    color: var(--white-clr-alt);
+    position: relative;
+    padding-bottom: .5rem;
+}
+.nav-link::before {
+    content: "";
+    height: .1rem;
+    width: 100%;
+    background-color: var(--white-clr-alt);
+    position: absolute;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: 300ms transform;
+}
+.nav-link:hover::before {
+    transform: scaleX(1);
+    transition: 300ms transform;
+}
+
+.active {
+    position: relative;
+    padding-bottom: .5rem;
+}
+.active::before {
+    content: "";
+    height: .1rem;
+    width: 100%;
+    background-color: var(--white-clr-alt);
+    position: absolute;
+    bottom: 0;
+    transform: scaleX(1);
+    transition: 300ms transform;
+}
+.active:hover::before {
+    transform: scaleX(.1);
+    transition: 300ms transform;
+}
+
+@media screen and (max-width: 852px) {
+    /* --- HEADER --- */
+    .header {
+        padding: 1rem .5rem;
+    }
+    .hamburger-close-container {
+        display: block;
+    }
+    .bx-menu, .bx-x {
+        cursor: pointer;
+    }
+    .bx-x {
+        display: none;
+    }
+    .show {
+        display: block;
+    }
+    .hide {
+        display: none;
+    }
+    .nav-bar {
+        background-color: var(--primary-clr);
+        position: absolute;
+        padding: 2rem 2.5rem;
+        top: 4.7rem;
+        right: 0;
+        border-bottom-left-radius: 5px;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: 300ms transform;
+    }
+    .show-nav_bar {
+        transform: scaleY(1);
+    }
+    .nav-items {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-item {
+        margin: 1rem 0;
+    }
+    .nav-item:first-child {
+        margin-top: 0;
+    }
+    .nav-item:last-child {
+        margin-bottom: 0;
+    }
+}
+
+main {
+    display: none;
 }
 
 .book-description {
-    color: #333;
+    color: rgba(51, 51, 51, 0.678);
+    font-size: 1rem;
+    letter-spacing: .04rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+}
+.book-sub-info {
+    font-size: .9rem;
+    color: rgba(51, 51, 51, 0.678);
+    font-weight: 300;
 }
 
 .book-full-description {
@@ -20,11 +169,13 @@
     height: 280px;
 }
 
-
 .search-bar {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
+}
+.card {
+    position: relative;
 }
 
 .card:hover {
@@ -39,6 +190,13 @@
 
 .card-body {
     background-color: rgb(253, 237, 237);
+}
+.card-title {
+    color: #0077b6;
+    transition: 300ms color;
+}
+.card-title:hover {
+    color: #023e8a;
 }
 
 .pencil-sign {
@@ -98,8 +256,6 @@
     color: #ffffff;
     text-align: left;
 }
-
-
 
 .styled-table th,
 .styled-table td {
