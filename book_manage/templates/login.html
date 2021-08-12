@@ -1,48 +1,44 @@
 {% extends "layout.html" %}
 {% block content %}
 <div class='content-section'>
-    <form method='POST' action="">
+    <form method='POST' action="" class="form-container">
         {{ form.hidden_tag() }}
-        <fieldset class='form-group mt-3'>
-            <legend class='border-bottom mb-4'>Admin LogIn</legend>
+        <div class="form-container-sub">
+            <h2 class='form-title'>Admin LogIn</h2>
 
-            <div class='form-group mt-3'>
+            <div class='form-group'>
                 {{ form.email.label(class="form-control-label") }}
                 {% if form.email.errors %}
-                {{ form.email(class="form-control form-control-lg is-invalid") }}
+                {{ form.email(class="form-control is-invalid") }}
                 <div class='invalid-feedback'>
                     {% for error in form.email.errors %}
                     <span>{{ error }}</span>
                     {% endfor %}
                 </div>
                 {% else %}
-                {{ form.email(class="form-control form-control-lg") }}
+                {{ form.email(class="form-control") }}
                 {% endif %}
             </div>
 
-            <div class='form-group mt-3'>
+            <div class='form-group '>
                 {{ form.password.label(class="form-control-label") }}
                 {% if form.password.errors %}
-                {{ form.password(class="form-control form-control-lg is-invalid") }}
+                {{ form.password(class="form-control is-invalid") }}
                 <div class='invalid-feedback'>
                     {% for error in form.password.errors %}
                     <span>{{ error }}</span>
                     {% endfor %}
                 </div>
                 {% else %}
-                {{ form.password(class="form-control form-control-lg") }}
+                {{ form.password(class="form-control") }}
                 {% endif %}
             </div>
 
-        </fieldset>
-        <div class='form-group mt-3'>
-            {{ form.submit(class='btn btn-outline-danger') }}
+            <div class='form-group '>
+                {{ form.submit(class='btn btn-submit') }}
+            </div>
         </div>
     </form>
 </div>
-<div class='pt-3 mt-3'>
-    <small class="text-muted">
-        Need An Account? <a class="ml-2" , href="{{ url_for('register') }}">Sign Up Now</a>
-    </small>
-</div>
+<small class="register_login_acc">Need An Account? <a href="{{ url_for('register') }}"> Sign Up </a> now</small>
 {% endblock content %}

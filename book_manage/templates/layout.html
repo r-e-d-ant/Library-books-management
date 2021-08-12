@@ -48,20 +48,20 @@
                     </li>
                 {% endif %}
             </ul>
-            <div class="user-icon-container">
-                <div class="user-icon">
-                    <i class="bx bx-user"></i>
+            {% if current_user.is_authenticated %}
+                <div class="user-icon-container">
+                    <div class="user-icon">
+                        <i class="bx bx-user"></i>
+                    </div>
+                    <i class='bx bxs-down-arrow'></i>
+                    <div class="librarian_name">
+                        <span>{{current_user.username}}</span>
+                        <li class="nav-item logout">
+                            <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+                        </li>
+                    </div>
                 </div>
-                <i class='bx bxs-down-arrow'></i>
-                <div class="librarian_name">
-                    <span>{{current_user.username}}</span>
-                    {% if current_user.is_authenticated %}
-                    <li class="nav-item logout">
-                        <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
-                    </li>
-                    {% endif %}
-                </div>
-            </div>
+            {% endif %}
         </nav>
         <div class="hamburger-close-container">
             <i class="bx bx-menu nav-icon"></i>
@@ -70,20 +70,18 @@
     </header>
     <!-- Main -->
     <main class='container'>
-        <div class='row-3'>
-            <div class=''>
-                {% with messages = get_flashed_messages(with_categories=True) %}
-                    {% if messages %}
-                        {% for category, message in messages %}
-                            <div class='alert alert-{{ category }}'>
-                                {{ message }}
-                            </div>
+        <div class="message">
+            {% with messages = get_flashed_messages(with_categories=True) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class='alert alert-{{ category }}'>
+                            {{ message }}
+                        </div>
                         {% endfor %}
-                    {% endif %}
-                {% endwith %}
-                {% block content %}{% endblock%}
-            </div>
+                {% endif %}
+            {% endwith %}
         </div>
+        {% block content %}{% endblock%}
     </main>
     <script src="{{ url_for('static', filename='main.js') }}"></script>
 </body>

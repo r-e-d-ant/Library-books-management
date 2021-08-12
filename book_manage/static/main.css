@@ -10,6 +10,9 @@
     --white-input-clr: #f3f8fd;
     --gray-clr: #617283;
     --link-clr: #2083F8;
+    --error-clr: #ea1601;
+    --warning-clr: #fad202;
+    --success-clr: #64bc26;
     --footer-bg-clr: #063060;
 }
 /* --- BASE --- */
@@ -28,6 +31,33 @@ a {
 }
 .container {
     padding: 0 2rem;
+}
+.is-invalid {
+    border: thin solid var(--error-clr);
+}
+.invalid-feedback {
+    font-size: .8rem;
+    color: var(--error-clr);
+}
+.message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.3rem;
+}
+.alert {
+    padding: 1.1rem 2rem;
+    border-radius: 5px;
+}
+.alert-success {
+    background-color: hsl(95, 66%, 44%, 0.322);
+}
+.alert-danger {
+    background-color: hsla(5, 99%, 46%, 0.322);
+    color: var(--dark-clr);
+}
+.alert-warning {
+    background-color: hsl(50, 98%, 49%, 0.322);
 }
 body {
     font-family: 'Source Code Pro', monospace;
@@ -443,7 +473,7 @@ th {
     font-size: 12px;
 }
 
-/* Upload Book */
+
 .form-title {
     color: var(--primary-clr);
     font-size: 1.8rem;
@@ -500,4 +530,16 @@ th {
     .btn-submit {
         font-size: 1.2rem;
     }
+}
+
+/* Upload Book page */
+
+.register_login_acc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #021831a6;
+}
+.register_login_acc a {
+    color: var(--link-clr);
 }
