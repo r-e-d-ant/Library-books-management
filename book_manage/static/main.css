@@ -319,17 +319,6 @@ main {
     font-weight: 300;
 }
 
-@media screen and (min-width: 1024px){
-    .books-container {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 2rem;
-    }
-    .book {
-        border: thin solid #02183133;
-    }
-}
 
 .book-description {
     color: #021831c9;
@@ -370,6 +359,23 @@ main {
 }
 .btn-pagination:last-child {
     margin-right: 0;
+}
+@media screen and (min-width: 1024px){
+    .books-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    .book {
+        border: thin solid #02183133;
+    }
+    .btn-borrow {
+        font-size: 1rem;
+    }
+    .btn-pagination, .btn-pagination-out {
+        font-size: 1.4rem;
+    }
 }
 
 .book-full-description {
@@ -475,4 +481,19 @@ th {
     background-color: var(--primary-clr);
     color: var(--white-clr-alt);
     font-family: 'Source Code Pro', monospace;
+}
+
+@media screen and (min-width: 768px){
+    .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+    }
+    .form-control {
+        width: 150%;
+    }
+    .btn-submit {
+        font-size: 1.2rem;
+    }
 }

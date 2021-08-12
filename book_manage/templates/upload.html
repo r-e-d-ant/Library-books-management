@@ -2,20 +2,21 @@
 
 {% block content %}
 <div class='content-section mt-3'>
-    <form action='' method='POST'>
+    <form action='' method='POST' class="form-container">
         {{ form.hidden_tag() }}
-        <h2 class='form-title'>Register a book</h2>
+        <div class="form-container-sub">
+            <h2 class='form-title'>Register a Book</h2>
         <div class='form-group'>
             {{ form.title.label(class='form-control-label')}}
             {% if form.title.errors %}
-                {{ form.title(class='form-control form-control-lg is-invalid')}}
+                {{ form.title(class='form-control is-invalid')}}
                 <div class='invalid-feedback'>
                     {% for error in form.title.errors %}
                         <span> {{ error }} </span>
                     {% endfor %}
                 </div>
             {% else %}
-                {{ form.title(class='form-control form-control-lg')}}
+                {{ form.title(class='form-control')}}
             {% endif %}
         </div>
 
@@ -23,14 +24,14 @@
         <div class='form-group mt-3'>
             {{ form.author.label(class='form-control-label')}}
             {% if form.author.errors %}
-                {{ form.author(class='form-control form-control-lg is-invalid')}}
+                {{ form.author(class='form-control is-invalid')}}
                 <div class='invalid-feedback'>
                     {% for error in form.author.errors %}
                         <span> {{ error }} </span>
                     {% endfor %}
                 </div>
             {% else %}
-                {{ form.author(class='form-control form-control-lg')}}
+                {{ form.author(class='form-control')}}
             {% endif %}
         </div>
 
@@ -51,6 +52,7 @@
     <div class='form-group mt-3'>
         {{ form.submit(class='btn btn-submit')}}
     </div>
+        </div>
     </form>
 </div>
 {% endblock %}
