@@ -118,24 +118,6 @@ body {
     transition: 300ms transform;
 }
 
-.active {
-    position: relative;
-    padding-bottom: .5rem;
-}
-.active::before {
-    content: "";
-    height: .1rem;
-    width: 100%;
-    background-color: var(--white-clr-alt);
-    position: absolute;
-    bottom: 0;
-    transform: scaleX(1);
-    transition: 300ms transform;
-}
-.active:hover::before {
-    transform: scaleX(.1);
-    transition: 300ms transform;
-}
 .user-icon-container {
     cursor: pointer;
     margin-left: 3rem;
@@ -349,6 +331,9 @@ main {
     font-size: 1.4rem;
     margin-top: 1.5rem;
 }
+.book-title:hover {
+    text-decoration: underline;
+}
 .book_subinfo-container {
     margin-top: 1rem;
 }
@@ -541,8 +526,8 @@ main {
 .dates {
     display: flex;
 }
-.borrow-date {
-    margin-right: 6rem;
+.boro_date {
+    margin-right: 5rem;
 }
 
 /* Borrowed Books page */
