@@ -28,6 +28,7 @@ ul, li {
 }
 a {
     text-decoration: none;
+    color: var(--link-clr);
 }
 .container {
     padding: 0 2rem;
@@ -353,16 +354,19 @@ main {
 .book-sub-info:last-child {
     margin-top: .5rem;
 }
-.book-sub-info b, .book-register {
+.book-sub-info b {
+    color: #02183160;
+}
+.book-register {
     color: #2081f8c4;
     font-weight: 300;
 }
 
 
 .book-description {
-    color: #021831c9;
+    color: #021831a9;
     font-size: .9rem;
-    letter-spacing: .04rem;
+    letter-spacing: .01rem;
     line-height: 1.5rem;
     margin: 2rem 0;
 }
