@@ -244,13 +244,36 @@ main {
     font-family: 'Source Code Pro', monospace;
 }
 
+@media screen and (min-width: 768px){
+    .header {
+        padding: 1rem;
+    }
+    .container {
+        padding: 0 1rem;
+    }
+    .search-bar {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .search-input {
+        height: 2.8rem;
+        width: 50%;
+        margin: 0;
+    }
+    .btn-search {
+        margin-left: 1.8rem;
+        font-size: 1.4rem;
+    }
+}
+
 .books-container {
     margin: 2rem 0;
 }
 .book {
+    background-color: var(--white-clr-alt);
     position: relative;
     margin: 2rem 0;
-    background-color: var(--white-clr-alt);
+    width: 40%;
     border: thin solid #02183154;
     border-radius: 5px;
     padding: 2.8rem 1rem 2rem 1rem;
@@ -296,9 +319,20 @@ main {
     font-weight: 300;
 }
 
+@media screen and (min-width: 1024px){
+    .books-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    .book {
+        border: thin solid #02183133;
+    }
+}
 
 .book-description {
-    color: var(--dark-clr);
+    color: #021831c9;
     font-size: .9rem;
     letter-spacing: .04rem;
     line-height: 1.5rem;
@@ -313,12 +347,20 @@ main {
 }
 .paginations {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
 }
 .btn-pagination {
     background-color: var(--primary-clr);
     color: var(--white-clr-alt);
+    font-size: 2rem;
+    padding: 0 2rem;
+    border-radius: 5px;
+}
+.btn-pagination-out {
+    border: thin solid var(--primary-clr);
+    color: var(--primary-clr);
     font-size: 2rem;
     padding: 0 2rem;
     border-radius: 5px;
