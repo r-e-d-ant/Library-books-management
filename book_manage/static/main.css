@@ -434,3 +434,45 @@ th {
     font-size: 12px;
 }
 
+/* Upload Book */
+.form-title {
+    color: var(--primary-clr);
+    font-size: 1.8rem;
+    margin: 2rem 0;
+    margin-bottom: 4rem;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+.form-control-label {
+    font-size: 1.1rem;
+    margin-bottom: .5rem;
+}
+.form-control {
+    height: 2.8rem;
+    font-size: 1.2rem;
+    font-family: 'Source Code Pro', monospace;
+    color: var(--dark-clr);
+    outline: none;
+    border: thin solid #01141159;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 0 .5rem;
+}
+.form-control-desc {
+    height: 5rem;
+    padding-top: .2rem;
+}
+.btn-submit {
+    cursor: pointer;
+    border: none;
+    width: 250px;
+    height: 45px;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    background-color: var(--primary-clr);
+    color: var(--white-clr-alt);
+    font-family: 'Source Code Pro', monospace;
+}

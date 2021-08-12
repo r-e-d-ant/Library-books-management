@@ -6,12 +6,11 @@ from book_manage.models import Admin
 
 # Register forms
 class RegistrationForm(FlaskForm):
-    username = StringField('Username', validators=[DataRequired(), Length(min=2, max=20)])
-    email = StringField('Email', validators=[DataRequired(), Email()])
+    username = StringField('Full name', validators=[DataRequired(), Length(min=2, max=20)])
+    email = StringField('Email address', validators=[DataRequired(), Email()])
     password = PasswordField('Password', validators=[DataRequired()])
-    confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password')])
     
-    submit = SubmitField('SignUp')
+    submit = SubmitField('Register')
     
     def validate_username(self, username):
         admin = Admin.query.filter_by(username=username.data).first()
@@ -26,7 +25,7 @@ class RegistrationForm(FlaskForm):
 
 # Login forms
 class LoginForm(FlaskForm):
-    email = StringField('Email', validators=[DataRequired(), Email()])
+    email = StringField('Email address', validators=[DataRequired(), Email()])
     password = PasswordField('Password', validators=[DataRequired()])
     
     submit = SubmitField('Login')
@@ -34,19 +33,19 @@ class LoginForm(FlaskForm):
 
 # Upload forms
 class Upload(FlaskForm):
-    title = StringField('Title', validators=[DataRequired()])
-    author = StringField('Author')
-    description = TextAreaField('Description')
+    title = StringField('Book title', validators=[DataRequired()])
+    author = StringField('Book author')
+    description = TextAreaField('Book description')
     
-    submit = SubmitField('Save')
+    submit = SubmitField('Register the book')
     
 
     
 # Borrow forms
 class Borrow(FlaskForm):
-    customer = StringField('Customer', validators=[DataRequired()])
-    title = StringField('Title', validators=[DataRequired()])
-    author = StringField('Author')
+    customer = StringField('Customer name', validators=[DataRequired()])
+    title = StringField('Book title', validators=[DataRequired()])
+    author = StringField('Book author')
     borrow_date = DateField('Borrow date')
     return_date = DateField('Return date')
     

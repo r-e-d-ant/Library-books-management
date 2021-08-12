@@ -9,7 +9,7 @@
 <div class="search_bar-container">
     <form class="search-bar" action="/search" method="POST">
         <input class="form-control search-input" type="text" name="searched_book">
-        <input class="btn-search" type="submit" value="search">
+        <input class="btn btn-search" type="submit" value="search">
     </form>
 </div>
 <!-- Firstly check if there is books -->
@@ -46,7 +46,7 @@
             <p class="book-description">{{ book.description }}</p>
             {% endif %}
         </div>
-        <a class="btn-borrow" href="{{ url_for('borrow', book_id = book.id)}}">Borrow</a>
+        <a class="btn btn-borrow" href="{{ url_for('borrow', book_id = book.id)}}">Borrow</a>
     </div>
     {% endfor %}
 </div>
@@ -54,7 +54,7 @@
     {% for page_num in books.iter_pages() %}
     {% if page_num %}
     {% if books.page == page_num %}
-    <a class='btn-pagination' href="{{ url_for('home', page=page_num) }}">{{ page_num }}</a>
+    <a class='btn btn-pagination' href="{{ url_for('home', page=page_num) }}">{{ page_num }}</a>
     {% else %}
     <a class='btn-pagination-out' href="{{ url_for('home', page=page_num) }}">{{ page_num }}</a>
     {% endif %}
