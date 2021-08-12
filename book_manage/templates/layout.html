@@ -6,9 +6,9 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-    <link type='text/css' href="{{ url_for('static', filename='main.css') }}" rel='stylesheet'>
+
     <link type='text/css' href="{{ url_for('static', filename='boxicons/css/boxicons.min.css') }}" rel='stylesheet'>
+    <link type='text/css' href="{{ url_for('static', filename='main.css') }}" rel='stylesheet'>
     {% if title %}
     <title>{{ title }}</title>
     {% else %}
@@ -74,8 +74,6 @@
             </div>
         </div>
     </main>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
 </body>
-
 </html>
-
-

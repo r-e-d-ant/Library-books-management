@@ -40,7 +40,10 @@ body {
 }
 .nav-icon {
     color: var(--white-clr-alt);
-    font-size: 2rem;
+    font-size: 2.5rem;
+}
+.hamburger-close-container {
+    display: none;
 }
 .nav-items {
     display: flex;
@@ -90,6 +93,59 @@ body {
 .active:hover::before {
     transform: scaleX(.1);
     transition: 300ms transform;
+}
+
+@media screen and (max-width: 852px) {
+    /* --- HEADER --- */
+    .header {
+        padding: 1rem .5rem;
+    }
+    .hamburger-close-container {
+        display: block;
+    }
+    .bx-menu, .bx-x {
+        cursor: pointer;
+    }
+    .bx-x {
+        display: none;
+    }
+    .show {
+        display: block;
+    }
+    .hide {
+        display: none;
+    }
+    .nav-bar {
+        background-color: var(--primary-clr);
+        position: absolute;
+        padding: 2rem 2.5rem;
+        top: 4.7rem;
+        right: 0;
+        border-bottom-left-radius: 5px;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: 300ms transform;
+    }
+    .show-nav_bar {
+        transform: scaleY(1);
+    }
+    .nav-items {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-item {
+        margin: 1rem 0;
+    }
+    .nav-item:first-child {
+        margin-top: 0;
+    }
+    .nav-item:last-child {
+        margin-bottom: 0;
+    }
+}
+
+main {
+    display: none;
 }
 
 .book-description {
