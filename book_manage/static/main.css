@@ -266,6 +266,9 @@ main {
     margin-bottom: 1rem;
     padding: 0 .5rem;
 }
+.search-input:focus {
+    box-shadow: 0 0 5px 1px #0218312c;
+}
 .btn-search {
     cursor: pointer;
     border: none;
@@ -294,6 +297,7 @@ main {
     }
     .search-bar {
         flex-direction: row;
+        align-items: center;
         justify-content: center;
     }
     .search-input {
@@ -465,6 +469,9 @@ main {
     border-radius: 5px;
     margin-bottom: 1rem;
     padding: 0 .5rem;
+}
+.form-control:focus {
+    box-shadow: 0 0 5px 1px #0218312c;
 }
 .form-control-desc {
     height: 5rem;
