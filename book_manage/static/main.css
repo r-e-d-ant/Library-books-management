@@ -269,7 +269,7 @@ main {
     padding: 0 .5rem;
 }
 .search-input:focus {
-    box-shadow: 0 0 5px 1px #0218312c;
+    box-shadow: 0 0 6px 1px #094e9d1c;
 }
 .btn-search {
     cursor: pointer;
@@ -481,7 +481,7 @@ main {
     padding: 0 .5rem;
 }
 .form-control:focus {
-    box-shadow: 0 0 5px 1px #0218312c;
+    box-shadow: 0 0 6px 1px #094e9d1c;
 }
 .form-control-desc {
     height: 5rem;
@@ -524,6 +524,17 @@ main {
 }
 .register_login_acc a {
     color: var(--link-clr);
+}
+
+/* Single book description  */
+.book-desc-container {
+    margin-top: 3rem;
+}
+.book-full-description {
+    color: #021831dc;
+    margin: 2rem 0;
+    margin-bottom: 4rem;
+    max-width: 40rem;
 }
 
 /* Borrow Book page */
