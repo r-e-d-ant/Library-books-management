@@ -23,8 +23,30 @@ bxX.addEventListener('click', () => {
 
 // show librarian name
 const userIcon = document.querySelector('.user-icon-container');
-const librarianName = document.querySelector('.librarian_name');
+if(userIcon){
+    const librarianName = document.querySelector('.librarian_name');
+    userIcon.addEventListener('click', () => {
+        librarianName.classList.toggle('show-librarian-name');
+    })
+}else {
+    console.log("I love u")
+}
 
-userIcon.addEventListener('click', () => {
-    librarianName.classList.toggle('show-librarian-name');
+// --- hide / show password ---
+// show password
+const showPasswordIcon = document.querySelector('.bxs-show');
+const hidePasswordIcon = document.querySelector('.bxs-hide');
+const passswordInput = document.querySelector('.password-input');
+
+showPasswordIcon.addEventListener('click', ()=> {
+    passswordInput.type = "text";
+    showPasswordIcon.classList.toggle('hide');
+    hidePasswordIcon.classList.remove('hide');
+})
+
+// hide password
+hidePasswordIcon.addEventListener('click', ()=> {
+    passswordInput.type = "password";
+    showPasswordIcon.classList.remove('hide');
+    hidePasswordIcon.classList.toggle('hide');
 })

@@ -52,7 +52,11 @@ a {
     color: var(--dark-clr);
 }
 .alert-warning {
-    background-color: hsl(50, 98%, 49%, 0.322);
+    background-color: hsla(50, 98%, 49%, 0.322);
+}
+.alert-info {
+    background-color: hsla(213, 94%, 55%, 0.322);
+    color: var(--dark-clr);
 }
 .btn {
     transition: 300ms background-color;
@@ -184,12 +188,6 @@ body {
         cursor: pointer;
     }
     .bx-x {
-        display: none;
-    }
-    .show {
-        display: block;
-    }
-    .hide {
         display: none;
     }
     .nav-bar {
@@ -430,14 +428,6 @@ main {
     }
 }
 
-.book-full-description {
-    white-space: pre-line;
-}
-
-.green {
-    color: rgb(32, 95, 73);
-}
-
 .form-title {
     color: var(--primary-clr);
     font-size: 1.8rem;
@@ -448,6 +438,7 @@ main {
     display: flex;
     flex-direction: column;
     margin-bottom: 1.5rem;
+    position: relative;
 }
 .form-control-label {
     font-size: 1.1rem;
@@ -471,6 +462,19 @@ main {
 .form-control-desc {
     height: 5rem;
     padding-top: .2rem;
+}
+.hide-show-pwd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 47%;
+    right: -5rem;
+}
+.bxs-show, .bxs-hide {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #021831be;
 }
 .btn-submit {
     cursor: pointer;
@@ -520,6 +524,7 @@ main {
     margin: 2rem 0;
     margin-bottom: 4rem;
     max-width: 40rem;
+    white-space: pre-line;
 }
 
 /* Borrow Book page */
@@ -609,4 +614,10 @@ th {
 .invalid-feedback {
     font-size: .8rem;
     color: var(--error-clr);
+}
+.show {
+    display: block;
+}
+.hide {
+    display: none;
 }
