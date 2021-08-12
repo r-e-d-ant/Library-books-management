@@ -52,10 +52,10 @@ a {
     color: var(--dark-clr);
 }
 .alert-warning {
-    background-color: hsl(50, 98%, 49%, 0.322);
+    background-color: hsla(50, 98%, 49%, 0.322);
 }
 .alert-info {
-    background-color: hsl(213, 94%, 55%, 0.322);
+    background-color: hsla(213, 94%, 55%, 0.322);
     color: var(--dark-clr);
 }
 .btn {
