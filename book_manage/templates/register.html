@@ -37,15 +37,19 @@
             <div class='form-group'>
                 {{ form.password.label(class="form-control-label") }}
                 {% if form.password.errors %}
-                {{ form.password(class="form-control is-invalid") }}
+                {{ form.password(class="form-control password-input is-invalid") }}
                 <div class='invalid-feedback'>
                     {% for error in form.password.errors %}
                     <span>{{ error }}</span>
                     {% endfor %}
                 </div>
                 {% else %}
-                {{ form.password(class="form-control") }}
+                {{ form.password(class="form-control password-input") }}
                 {% endif %}
+                <div class="hide-show-pwd">
+                    <i class='bx bxs-show'></i>
+                    <i class='bx bxs-hide hide'></i>
+                </div>
             </div>
 
             <div class='form-group'>
