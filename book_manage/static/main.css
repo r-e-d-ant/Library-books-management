@@ -19,7 +19,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-ul {
+ul, li {
     list-style: none;
 }
 a {
@@ -37,6 +37,7 @@ body {
     align-items: center;
     background-color: var(--primary-clr);
     padding: 1rem 2rem;
+    position: relative;
 }
 .nav-icon {
     color: var(--white-clr-alt);
@@ -44,6 +45,11 @@ body {
 }
 .hamburger-close-container {
     display: none;
+}
+.nav-bar {
+    background-color: var(--primary-clr);
+    display: flex;
+    align-items: center;
 }
 .nav-items {
     display: flex;
@@ -94,8 +100,57 @@ body {
     transform: scaleX(.1);
     transition: 300ms transform;
 }
+.user-icon-container {
+    cursor: pointer;
+    margin-left: 3rem;
+    display: flex;
+    align-items: flex-end;
+}
+.user-icon {
+    background-color: var(--white-clr-alt);
+    border-radius: 50%;
+    pointer-events: none;
+}
+.bx-user {
+    font-size: 1.5rem;
+    padding: .5rem;
+    color: var(--primary-clr);
+}
+.bxs-down-arrow {
+    font-size: 1rem;
+    color: var(--white-clr-alt);
+    opacity: .8;
+    pointer-events: none;
+}
+.librarian_name {
+    background-color: var(--primary-clr);
+    color: var(--white-clr-alt);
+    position: absolute;
+    bottom: -6rem;
+    right: .5rem;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 300ms transform;
+}
+.show-librarian-name {
+    transform: scaleY(1);
+}
+.librarian_name span {
+    color: var(--white-clr-alt);
+    cursor: auto;
+}
+.logout {
+    margin: 0;
+    margin-top: 1rem;
+}
 
-@media screen and (max-width: 852px) {
+@media screen and (max-width: 861px) {
     /* --- HEADER --- */
     .header {
         padding: 1rem .5rem;
@@ -116,7 +171,7 @@ body {
         display: none;
     }
     .nav-bar {
-        background-color: var(--primary-clr);
+        display: block;
         position: absolute;
         padding: 2rem 2.5rem;
         top: 4.7rem;
@@ -141,6 +196,9 @@ body {
     }
     .nav-item:last-child {
         margin-bottom: 0;
+    }
+    .user-icon-container {
+        margin-top: 1rem;
     }
 }
 
