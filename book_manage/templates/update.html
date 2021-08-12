@@ -1,22 +1,22 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-    <div class='content-section mt-3'>
-    <form action='' method='POST'>
+    <div class='content-section'>
+    <form action='' method='POST' class="form-container">
         {{ form.hidden_tag() }}
-        <fieldset class='form-group'>
-            <legend class='border-bottom mb-4'>Update a book</legend>
+        <div class='form-container-sub'>
+            <h2 class='form-title'>Update a book</h2>
             <div class='form-group'>
                 {{ form.title.label(class='form-control-label')}}
                 {% if form.title.errors %}
-                    {{ form.title(class='form-control form-control-lg is-invalid')}}
+                    {{ form.title(class='form-control is-invalid')}}
                     <div class='invalid-feedback'>
                         {% for error in form.title.errors %}
                             <span> {{ error }} </span>
                         {% endfor %}
                     </div>
                 {% else %}
-                    {{ form.title(class='form-control form-control-lg')}}
+                    {{ form.title(class='form-control')}}
                 {% endif %}
             </div>
 
@@ -24,14 +24,14 @@
             <div class='form-group mt-3'>
                 {{ form.author.label(class='form-control-label')}}
                 {% if form.author.errors %}
-                    {{ form.author(class='form-control form-control-lg is-invalid')}}
+                    {{ form.author(class='form-control is-invalid')}}
                     <div class='invalid-feedback'>
                         {% for error in form.author.errors %}
                             <span> {{ error }} </span>
                         {% endfor %}
                     </div>
                 {% else %}
-                    {{ form.author(class='form-control form-control-lg')}}
+                    {{ form.author(class='form-control')}}
                 {% endif %}
             </div>
 
@@ -39,19 +39,19 @@
             <div class='form-group mt-3'>
                 {{ form.description.label(class='form-control-label')}}
                 {% if form.description.errors %}
-                    {{ form.description(class='form-control form-control-lg is-invalid')}}
+                    {{ form.description(class='form-control form-control-desc is-invalid')}}
                     <div class='invalid-feedback'>
                         {% for error in form.description.errors %}
                             <span> {{ error }} </span>
                         {% endfor %}
                     </div>
                 {% else %}
-                    {{ form.description(class='form-control form-control-lg')}}
+                    {{ form.description(class='form-control form-control-desc')}}
                 {% endif %}
             </div>
-        </fieldset>
-        <div class='form-group mt-3'>
-            {{ form.submit(class='btn btn-outline-danger')}}
+            <div class='form-group'>
+                {{ form.submit(class='btn btn-submit')}}
+            </div>
         </div>
     </form>
 </div>

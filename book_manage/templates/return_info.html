@@ -1,7 +1,8 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-    <table class="styled-table mt-3 table-hover mt-3">
+<div class="table-container">
+    <table class="styled-table table-hover">
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -26,11 +27,12 @@
             <td>{{ return_info.borrowed_date.strftime('%Y-%m-%d') }}</td>
             <td>{{ return_info.returned_date.strftime('%Y-%m-%d') }}</td>
             <td>Yes</td>
-            <td><a class='link' href="{{ url_for('delete_return_info', return_info_id=return_info.id ) }}">Delete</a></td>
+            <td><a class='delete-link' href="{{ url_for('delete_return_info', return_info_id=return_info.id ) }}">Delete</a></td>
             </tr>
         </tbody>
     {% endfor %}
     </table>
+</div>
 {% endblock %}
 
 
