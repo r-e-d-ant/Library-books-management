@@ -32,13 +32,7 @@ a {
 .container {
     padding: 0 2rem;
 }
-.is-invalid {
-    border: thin solid var(--error-clr);
-}
-.invalid-feedback {
-    font-size: .8rem;
-    color: var(--error-clr);
-}
+
 .message {
     display: flex;
     align-items: center;
@@ -269,7 +263,7 @@ main {
     border: none;
     width: 150px;
     height: 45px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     border-radius: 5px;
     background-color: var(--primary-clr);
     color: var(--white-clr-alt);
@@ -542,4 +536,22 @@ th {
 }
 .register_login_acc a {
     color: var(--link-clr);
+}
+
+/* Borrow Book page */
+.dates {
+    display: flex;
+}
+.borrow-date {
+    margin-right: 6rem;
+}
+
+/* -- Base -- */
+
+.is-invalid {
+    border: thin solid var(--error-clr);
+}
+.invalid-feedback {
+    font-size: .8rem;
+    color: var(--error-clr);
 }
