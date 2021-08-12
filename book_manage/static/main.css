@@ -275,7 +275,6 @@ main {
     background-color: var(--white-clr-alt);
     position: relative;
     margin: 2rem 0;
-    width: 40%;
     border: thin solid #02183154;
     border-radius: 5px;
     padding: 2.8rem 1rem 2rem 1rem;
@@ -371,6 +370,7 @@ main {
     }
     .book {
         border: thin solid #02183133;
+        width: 40%;
         margin: 0;
     }
     .btn-borrow {
