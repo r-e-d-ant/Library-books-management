@@ -63,7 +63,16 @@
     {% else %}
 </div>
 <!-- Otherwise show this, and advice them to upload it by pass to * upload link *-->
-<h5 class='alert alert-danger muted lead' role='alert'>No books uploaded yet, Go <a class='link'
-        href="{{ url_for('upload') }}">Here</a> To Upload theme</h5>
+<h5 class='alert alert-danger'>
+    No books uploaded yet, Go
+    <a class='link' href="{{ url_for('upload') }}">Here</a>
+    To Upload theme
+</h5>
 {% endif %}
-{% endblock %}
+{% endblock content%}
+{% block footer%}
+<footer class="footer">
+    <div class="copy">© 2021, Lib</div>
+    <div class="designer">Developed by Thierry M.</div>
+</footer>
+{% endblock footer%}

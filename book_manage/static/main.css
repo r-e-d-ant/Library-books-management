@@ -359,13 +359,13 @@ main {
     border-bottom: thin solid #02183125;
 }
 
-
 .book-description {
     color: #021831a9;
     font-size: .9rem;
     letter-spacing: .01rem;
     line-height: 1.5rem;
     margin: 2rem 0;
+    white-space: pre-line;
 }
 .btn-borrow {
     background-color: var(--white-clr-alt);
@@ -604,7 +604,23 @@ th {
     font-size: 12px;
 }
 
-/* Returned Books page */
+/* -- footer -- */
+.footer {
+    background-color: var(--footer-bg-clr);
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.copy {
+    margin-bottom: .5rem;
+}
+.copy, .designer {
+    font-size: .8rem;
+    color: var(--white-clr-alt);
+    opacity: .5;
+}
 
 /* -- Base -- */
 

@@ -81,8 +81,9 @@
                 {% endif %}
             {% endwith %}
         </div>
-        {% block content %}{% endblock%}
+        {% block content %}{% endblock content%}
     </main>
+    {% block footer %}{% endblock footer%}
     <script src="{{ url_for('static', filename='main.js') }}"></script>
 </body>
 </html>
