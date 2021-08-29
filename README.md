@@ -1,6 +1,8 @@
-# library books management Web application
+# Library Books Management program
+-- Include ScreenShots
 
-# features in v1.0
+# Features:
+
 * Upload a book, and also see it at home page with other books.
 * You'll be able to edit the book if you make a mistake while registering it.
 * Borrow a book to the customer and register:<br>
@@ -15,15 +17,33 @@
 
 ----------------
 
-If you don't know how to run it, do:
+If you don't know how to run it locally do:
 
-$ cd library-books-management<br>
-$ python3 run.py<br>
+I. Open Terminal then copy paste those commands:
+  1. ```git clone https://github.com/r-e-d-ant/Library-books-management.git```
+  2. ```cd Library-books-management```
+  3. ```python3 -r requirements.txt```
+  4. ``` python3 run.py```
 
 If there is no errors in terminal,<br>
 Go in your browser and type: http://localhost:5000/
 
-Any suggestions ?! let me know.
+
+```
+// Programmers
+var error = false;
+if (error === true) {
+    Open an issue and let me know
+}else if(suggestions) {
+    Email me
+}else{
+  :)
+}
+
+- Users
+If you face any difficulties, Confusion, Questions or some errors Email me. Thank you !
+```
+
 
 Screen Shots
 -------------
