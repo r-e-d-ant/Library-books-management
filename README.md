@@ -1,7 +1,7 @@
 # library books management Web application
 
 # features in v1.0
-* Upload a book to the database, and also see it at home page.
+* Upload a book, and also see it at home page with other books.
 * You'll be able to edit the book if you make a mistake while registering it.
 * Borrow a book to the customer and register the borrowed date.
 * You'll be able to see the borrowed books information.
