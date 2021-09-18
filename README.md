@@ -1,5 +1,5 @@
 # Library Books Management program
--* Include ScreenShots
+* Include ScreenShots
 
 # Features:
 
@@ -17,7 +17,7 @@
 
 ----------------
 
-If you don't know how to run it locally do:
+> If you don't know how to run it locally do:
 
 I. Open Terminal then copy paste those commands:
   1. ```git clone https://github.com/r-e-d-ant/Library-books-management.git```
