@@ -1,5 +1,5 @@
 # Library Books Management program
--- Include ScreenShots
+-* Include ScreenShots
 
 # Features:
 
