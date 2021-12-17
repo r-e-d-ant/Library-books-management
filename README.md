@@ -32,17 +32,17 @@ Go in your browser and type: http://localhost:5000/
 
 
 ```
-// Programmers
+// For Programmers
 var error = false;
-if (error === true) {
-    Open an issue and let me know
-}else if(suggestions) {
-    Email me
+var suggestions = false;
+
+if (error === true || suggestions === true) {
+    Open an Issue and let me know
 }else{
   :)
 }
 
-- Users
+- For Users
 If you face any difficulties, Confusion, Questions or some errors Email me. Thank you !
 ```
 
