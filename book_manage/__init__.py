@@ -19,3 +19,6 @@ login_manager.login_message_category = 'info'
 
 from book_manage.forms import Upload, Borrow, LoginForm, RegistrationForm
 from book_manage import routes
+
+with app.app_context():
+    db.create_all()

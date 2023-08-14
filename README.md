@@ -21,11 +21,9 @@
 
 I. Open Terminal then copy paste those commands:
   1. ```git clone https://github.com/r-e-d-ant/Library-books-management.git```
-  2. ```cd Library-books-management```
-  3. ```python3 -r requirements.txt```
-  4. ``` python3 run.py```
+  2. ```docker build -t libmgmt .```
+  3. ```docker run --rm -it -p 5000:5000 -v $(pwd):/ws libmgmt```
 
-If there is no errors in terminal,<br>
 Go in your browser and type: http://localhost:5000/
 
 ------------------------------------------------------------------------------
